@@ -14,3 +14,6 @@ TensorFlow compiled on CPU without AVX
 | Size:       | ~82MB       |
 | Link:       | bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl |
 
+---
+
+Added to list [tensorflow-community-wheels](https://github.com/yaroslavvb/tensorflow-community-wheels) as issues 135 [Tensorflow 1.14.0, CPU, no AVX, Python 3.7.4, Linux Mint 19.2 "Tina" 64bit](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/135)
