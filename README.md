@@ -20,4 +20,4 @@ Added to list [tensorflow-community-wheels](https://github.com/yaroslavvb/tensor
 
 ## Install
 
-    pip3 install git+https://github.com/furas/tensorflow-no-avx.git
+    pip3 install https://media.githubusercontent.com/media/furas/tensorflow-no-avx/master/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
