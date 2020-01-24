@@ -17,3 +17,7 @@ TensorFlow compiled on CPU without AVX
 ---
 
 Added to list [tensorflow-community-wheels](https://github.com/yaroslavvb/tensorflow-community-wheels) as [Issue 135: Tensorflow 1.14.0, CPU, no AVX, Python 3.7.4, Linux Mint 19.2 "Tina" 64bit](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/135)
+
+## Install
+
+    pip3 install git+https://github.com/furas/tensorflow-no-avx.git
