@@ -20,12 +20,6 @@ TensorFlow compiled on CPU without AVX
 
 [Git Large File Storage (LFS)](https://git-lfs.github.com/)
 
-### 2020.05.05
-
-Originally `.whl` was on Git LFS but it has limitations for free use so I put `.whl` also on private server.
-
-Mirror: [https://furas.pl/project/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl](https://furas.pl/project/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl)
-
 ---
 
 Added to list [tensorflow-community-wheels](https://github.com/yaroslavvb/tensorflow-community-wheels) as [Issue 135: Tensorflow 1.14.0, CPU, no AVX, Python 3.7.4, Linux Mint 19.2 "Tina" 64bit](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/135)
@@ -33,3 +27,14 @@ Added to list [tensorflow-community-wheels](https://github.com/yaroslavvb/tensor
 ## Install
 
     pip3 install https://media.githubusercontent.com/media/furas/tensorflow-no-avx/master/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
+    
+## 2020.05.05
+
+Originally `.whl` was on Git LFS but it has limitations for free use so I put `.whl` also on private server.
+
+Download: [https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl](https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl)
+
+Or install:
+
+    pip3 install https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
+
