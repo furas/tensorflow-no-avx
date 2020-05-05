@@ -1,4 +1,5 @@
 # tensorflow-no-avx
+
 TensorFlow compiled on CPU without AVX
 
 ---
@@ -13,4 +14,15 @@ TensorFlow compiled on CPU without AVX
 | CPU:        | Intel® Core™ i5 CPU M 430 @ 2.27GHz × 4 |
 | Size:       | ~82MB       |
 | Link:       | bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl |
+| GCC:        | gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) |
+
+---
+
+[Git Large File Storage (LFS)](https://git-lfs.github.com/)
+
+### 2020.05.05
+
+Originally `.whl` was on Git LFS but it has limitations for free use so I put `.whl` also on private server.
+
+Mirror: [https://furas.pl/project/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl](https://furas.pl/project/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl)
 
