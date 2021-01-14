@@ -34,7 +34,7 @@ pip3 install https://media.githubusercontent.com/media/furas/tensorflow-no-avx/m
 
 Originally `.whl` was on `Git LFS` but it has limitations for free use so I had to put `.whl` on private server.
 
-***Download and install from local file:**
+**Download and install from local file:**
 
 [https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl](https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl)
 
@@ -51,5 +51,5 @@ pip3 install https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-c
 
 ### 2021.01.14
 
-More information about compiling and installing in [Notes](Notes.md)
+More information about compiling and installing in [NOTES.md](NOTES.md)
 
