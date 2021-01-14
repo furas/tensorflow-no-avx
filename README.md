@@ -23,12 +23,12 @@ as [Issue 135: Tensorflow 1.14.0, CPU, no AVX, Python 3.7.4, Linux Mint 19.2 "Ti
 
 ---
 
-## Install
+## Installation
     
 ### 2020.05.05
 
 Originally `.whl` was on `Git LFS` ([Git Large File Storage (LFS)](https://git-lfs.github.com/)) and you could install it from GitHub 
-but `Git LFS` has limitations for free use so I had to put `.whl` on private server.
+`bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl` but `Git LFS` has limitations for free users so I had to put `.whl` on private server.
 
 **Install directly from server:**
 
@@ -38,7 +38,11 @@ pip3 install https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-c
 
 **Download and later install from local file:**
 
+download:
+
 [https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl](https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl)
+
+install:
 
 ```
 pip3 install tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
