@@ -13,27 +13,28 @@ TensorFlow compiled on CPU without AVX
 | Kernel:     | 5.0.0-25-generic x86_64 |
 | CPU:        | Intel® Core™ i5 CPU M 430 @ 2.27GHz × 4 |
 | Size:       | ~82MB       |
-| Link:       | bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl |
+| Link:       | [https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl](https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl) |
 | GCC:        | gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) |
-
----
-
-[Git Large File Storage (LFS)](https://git-lfs.github.com/) (doesn't use any more)
 
 ---
 
 Added to list [tensorflow-community-wheels](https://github.com/yaroslavvb/tensorflow-community-wheels)  
 as [Issue 135: Tensorflow 1.14.0, CPU, no AVX, Python 3.7.4, Linux Mint 19.2 "Tina" 64bit](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/135)
 
-### Install
+---
 
-```
-pip3 install https://media.githubusercontent.com/media/furas/tensorflow-no-avx/master/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
-```
+## Install
     
 ### 2020.05.05
 
-Originally `.whl` was on `Git LFS` but it has limitations for free use so I had to put `.whl` on private server.
+Originally `.whl` was on `Git LFS` ([Git Large File Storage (LFS)](https://git-lfs.github.com/)) and you could install it from GitHub 
+but `Git LFS` has limitations for free use so I had to put `.whl` on private server.
+
+**Install directly from server:**
+
+```
+pip3 install https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
+```
 
 **Download and later install from local file:**
 
@@ -41,13 +42,6 @@ Originally `.whl` was on `Git LFS` but it has limitations for free use so I had 
 
 ```
 pip3 install tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
-```
-
-
-**Install directly from server:**
-
-```
-pip3 install https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
 ```
 
 ### 2021.01.14

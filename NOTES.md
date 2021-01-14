@@ -9,6 +9,9 @@ Doc: [Tensorflow: Build from source](https://www.tensorflow.org/install/source)
 
 https://docs.bazel.build/versions/master/install-ubuntu.html
 
+
+This method I could install only `1.0.0` but it needs `0.26.2` or older
+
 ```
 sudo apt install curl gnupg
 
@@ -19,9 +22,20 @@ curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
 
 echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
 
-apt install bazel
+sudo apt update
+sudo apt install bazel-1.0.0
 
 bazel
+```
+
+Download `0.26.1` because I didn't find `0.26.2`
+
+https://github.com/bazelbuild/bazel/releases/tag/0.26.1
+
+https://github.com/bazelbuild/bazel/releases/download/0.26.1/bazel_0.26.1-linux-x86_64.deb
+
+```
+sudo dpkg -i bazel_0.26.1-linux-x86_64.deb
 ```
 
 ## Clone code 
@@ -32,7 +46,67 @@ git clone https://github.com/tensorflow/tensorflow.git
 cd tensorflow/
 
 git checkout r1.14
+```
 
+## Configure
+
+It needs `bazel 0.26.2`
+
+```
+./configure
+```
+
+```
+WARNING: --batch mode is deprecated. Please instead explicitly shut down your Bazel server using the command "bazel shutdown".
+You have bazel 0.26.1 installed.
+Please specify the location of python. [Default is /usr/bin/python]: /usr/bin/python3.7
+
+
+Found possible Python library paths:
+  /usr/local/lib/python3.7/dist-packages
+  /usr/lib/python3/dist-packages
+Please input the desired Python library path to use.  Default is [/usr/local/lib/python3.7/dist-packages]
+
+Do you wish to build TensorFlow with XLA JIT support? [Y/n]: 
+XLA JIT support will be enabled for TensorFlow.
+
+Do you wish to build TensorFlow with OpenCL SYCL support? [y/N]: 
+No OpenCL SYCL support will be enabled for TensorFlow.
+
+Do you wish to build TensorFlow with ROCm support? [y/N]: 
+No ROCm support will be enabled for TensorFlow.
+
+Do you wish to build TensorFlow with CUDA support? [y/N]: 
+No CUDA support will be enabled for TensorFlow.
+
+Do you wish to download a fresh release of clang? (Experimental) [y/N]: 
+Clang will not be downloaded.
+
+Do you wish to build TensorFlow with MPI support? [y/N]: 
+No MPI support will be enabled for TensorFlow.
+
+Please specify optimization flags to use during compilation when bazel option "--config=opt" is specified [Default is -march=native -Wno-sign-compare]: 
+
+
+Would you like to interactively configure ./WORKSPACE for Android builds? [y/N]: 
+Not configuring the WORKSPACE for Android builds.
+
+Preconfigured Bazel build configs. You can use any of the below by adding "--config=<>" to your build command. See .bazelrc for more details.
+	--config=mkl         	# Build with MKL support.
+	--config=monolithic  	# Config for mostly static monolithic build.
+	--config=gdr         	# Build with GDR support.
+	--config=verbs       	# Build with libverbs support.
+	--config=ngraph      	# Build with Intel nGraph support.
+	--config=numa        	# Build with NUMA support.
+	--config=dynamic_kernels	# (Experimental) Build kernels into separate shared objects.
+Preconfigured Bazel build configs to DISABLE default on features:
+	--config=noaws       	# Disable AWS S3 filesystem support.
+	--config=nogcp       	# Disable GCP support.
+	--config=nohdfs      	# Disable HDFS support.
+	--config=noignite    	# Disable Apache Ignite support.
+	--config=nokafka     	# Disable Apache Kafka support.
+	--config=nonccl      	# Disable NVIDIA NCCL support.
+Configuration finished
 ```
 
 ## Compile code
@@ -69,6 +143,7 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
 
 sudo apt-get install python3.7
+sudo apt-get install python3.7-dev
 ```
 
 And install module(s)
@@ -90,4 +165,12 @@ To use `contrib` you have to import it
 
 ```
 import tensorflow.contrib
+```
+
+---
+
+Use even less `CPU` with `cpulimit`
+
+```
+cpulimit -l 80 -- bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package --jobs 1
 ```
