@@ -18,11 +18,12 @@ TensorFlow compiled on CPU without AVX
 
 ---
 
-[Git Large File Storage (LFS)](https://git-lfs.github.com/)
+[Git Large File Storage (LFS)](https://git-lfs.github.com/) (doesn't use any more)
 
 ---
 
-Added to list [tensorflow-community-wheels](https://github.com/yaroslavvb/tensorflow-community-wheels) as [Issue 135: Tensorflow 1.14.0, CPU, no AVX, Python 3.7.4, Linux Mint 19.2 "Tina" 64bit](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/135)
+Added to list [tensorflow-community-wheels](https://github.com/yaroslavvb/tensorflow-community-wheels)  
+as [Issue 135: Tensorflow 1.14.0, CPU, no AVX, Python 3.7.4, Linux Mint 19.2 "Tina" 64bit](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/135)
 
 ### Install
 
@@ -34,7 +35,7 @@ pip3 install https://media.githubusercontent.com/media/furas/tensorflow-no-avx/m
 
 Originally `.whl` was on `Git LFS` but it has limitations for free use so I had to put `.whl` on private server.
 
-**Download and install from local file:**
+**Download and later install from local file:**
 
 [https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl](https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl)
 
@@ -51,5 +52,5 @@ pip3 install https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-c
 
 ### 2021.01.14
 
-More information about compiling and installing in [NOTES.md](NOTES.md)
+More information about compilation and installation in file [NOTES.md](NOTES.md)
 
