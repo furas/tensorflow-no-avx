@@ -26,17 +26,30 @@ Added to list [tensorflow-community-wheels](https://github.com/yaroslavvb/tensor
 
 ### Install
 
-    pip3 install https://media.githubusercontent.com/media/furas/tensorflow-no-avx/master/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
+```
+pip3 install https://media.githubusercontent.com/media/furas/tensorflow-no-avx/master/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
+```
     
 ### 2020.05.05
 
-Originally `.whl` was on Git LFS but it has limitations for free use so I put `.whl` also on private server.
+Originally `.whl` was on `Git LFS` but it has limitations for free use so I had to put `.whl` on private server.
 
-Download: 
+***Download and install from local file:**
 
 [https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl](https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl)
 
-On install:
+```
+pip3 install tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
+```
 
-    pip3 install https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
+
+**Install directly from server:**
+
+```
+pip3 install https://furas.pl/projects/tensorflow-no-avx/bin/tensorflow-1.14.0-cp37-cp37m-linux_x86_64.whl
+```
+
+### 2021.01.14
+
+More information about compiling and installing in [Notes](Notes.md)
 
