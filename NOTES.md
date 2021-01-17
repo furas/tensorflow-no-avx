@@ -174,3 +174,76 @@ Use even less `CPU` with `cpulimit`
 ```
 cpulimit -l 80 -- bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package --jobs 1
 ```
+
+---
+
+```
+no known conversion for argument 2 from '<unresolved overloaded function type>' to 'PyUFuncGenericFunction'
+```
+
+it needs `numpy < 1.19.0`
+
+https://github.com/tensorflow/tensorflow/issues/41061
+
+**TF-1.14:**
+```
+pip install 'numpy<1.19.0'
+pip install -U pip six wheel mock
+pip install future
+pip install keras_applications==1.0.4 --no-deps
+pip install keras_preprocessing==1.0.2 --no-deps
+pip install pandas
+```
+
+----
+
+
+kernel: 5.8.0-36-generic x86_64
+System: 
+GCC: gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04) 
+Target: x86_64-linux-gnu
+
+# command `neofetch`
+
+OS: Linux Mint 20 x86_64  (MATE)
+CPU: Intel i5 M 430 (4) @ 2.267GHz
+GPU: AMD ATI Mobility Radeon HD 5650/5750 / 6530M/6550M
+Memory: 4119MiB / 7822MiB
+
+---
+
+https://github.com/tensorflow/tensorflow/issues/41061#issuecomment-662222308
+
+'numpy<1.19.0'
+
+TF-1.14:
+pip install 'numpy<1.19.0'
+pip install -U pip six wheel mock
+pip install future
+pip install keras_applications==1.0.4 --no-deps
+pip install keras_preprocessing==1.0.2 --no-deps
+pip install pandas
+
+https://github.com/bazelbuild/bazel/releases/tag/0.25.2
+
+bazel version: bazel-0.25.2-installer-linux-x86_64.sh
+
+
+
+---
+
+https://docs.bazel.build/versions/master/install-bazelisk.html
+
+```
+sudo npm install -g @bazel/bazelisk
+```
+
+or precompiled on https://github.com/bazelbuild/bazelisk/releases
+
+
+
+INFO: Elapsed time: 28284.865s, Critical Path: 265.76s
+INFO: 7152 processes: 7152 local.
+INFO: Build completed successfully, 7613 total actions
+
+Elapsed time: 28284 (~7.8h)
